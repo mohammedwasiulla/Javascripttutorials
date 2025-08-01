@@ -2,9 +2,9 @@
 
 An interactive web tool that visually explains the difference between `var`, `let`, and `const` in JavaScript — with beautiful animations and a typing output effect. Great for beginners, students, and content creators.
 
-![screenshot](./screenshot.png)
 
 ---
+<img width="1575" height="887" alt="scopeVisualizer" src="https://github.com/user-attachments/assets/68673fb4-f4dd-48d4-949b-d7011e77679f" />
 
 ## 📌 Features
 
