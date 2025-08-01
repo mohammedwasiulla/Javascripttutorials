@@ -1,0 +1,142 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Animated Gradient Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #1d2b64, #f8cdda, #0f2027, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #ffffffcc;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1s ease;
+}
+
+/* Buttons Styling */
+button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid #ffffff55;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+button:hover {
+  border-color: #fff;
+  transform: scale(1.05);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* Output Box */
+pre#output {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  max-height: 320px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease;
+  scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+
+  pre#output {
+    font-size: 0.9rem;
+  }
+}
